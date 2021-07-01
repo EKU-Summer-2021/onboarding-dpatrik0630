@@ -1,19 +1,21 @@
+"""System module"""
 import unittest
 import numpy as np
+
 from src import Polynomial
 
 
-class PolynomialTets(unittest.TestCase):
-
-    def test_square_of_three_should_be_nince(self):
+class PolynomialTest(unittest.TestCase):
+    '''
+    Polynomial test
+    '''
+    def test_square_of_three_should_be_nine(self):
+        """function for polynomial test"""
         # given
-        p = Polynomial(np.array([1,0,0]))
-        X_VALUE = 3
-        EXPECTED = 9
+        polynom = Polynomial(np.array([1, 0, 0]))
+        x_value = 3
+        expected = 9
         # when
-        ACTUAL = p.evaluate(X_VALUE)
+        actual = polynom.evaluate(x_value)
         # then
-        self.assertEqual(EXPECTED, ACTUAL)
-
-    # def test_fails(self):
-    #     self.assertEqual(True, False)
+        self.assertEqual(expected, actual)
